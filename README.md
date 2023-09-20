@@ -1,4 +1,4 @@
-!-- Encabezado -->
+<!-- Encabezado -->
 <h1 style="background-color: #d62728">Acerca de Mi</h1>
 
 <!-- Introducción -->
@@ -15,6 +15,6 @@
 <h2 style="background-color: #ff7f0e">Contacto</h2>
 <ul>
   <li>LinkedIn: <a href="https://www.linkedin.com/in/yrwin-henao-785aa31b7/">https://www.linkedin.com/in/yrwin-henao-785aa31b7/</a></li>
-  <li>Kaggle: <a href="https://www.kaggle.com/yrwinhenao/code"</a></li>
+  <li>Kaggle: <a href="https://www.kaggle.com/yrwinhenao/code">https://www.kaggle.com/yrwinhenao/code/</a></li>
   <li>Correo electrónico: yerhenao9@gmail.com</li>
 </ul>
