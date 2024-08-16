@@ -1,0 +1,257 @@
+---
+title: <span style="color:Green">Informe Red Cooperamos</span>
+author: "Informacion de todo lo relacionado con los referidos registrados y efectivos que se administran por la Red Cooperamos"
+date: ""
+output: html_document
+params:
+  mes: "Octubre"
+  año: "2022"
+  curso: "Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(comment = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+Informe actualizado a la fecha: `r Sys.time()`
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos/Imagenes/Coomeva.PNG){width=width height=height}
+
+___
+
+## Gestion Referidos - `r params$mes` `r params$año` - RED COOPERAMOS
+
+#### Resumen Mensual - Registrados y Efectivos - `r params$mes` `r params$año`
+
+##
+
+<div style="text-align: justify">En el mes de `r params$mes` se han registrado un total de **`r total_registrados_mes_actual`** referidos frente una meta de **`r total_meta_registrados_mes_actual`** para un cumplimiento del **`r total_cumplimiento_registrados_mes_actual`**, de cuales han ingresado **`r total_efectivos_mes_actual`** referidos efectivos, se encuentran en preingresos **`r total_preingresos_mes_actual`** para un total de **`r total_vinculaciones_mes_actual`** vinculaciones frente a una meta de **`r total_meta_efectivos_mes_actual`** para un cumplimiento de **`r total_cumplimiento_efectivos_mes_actual`**.<div/>
+
+##
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos 2.0 - 2022/Imagenes/cuadro_mensual_final.png){width=width height=height}
+
+##
+
+
+```{r}
+ggplot(resumen_mes_actual_registrados_nacional,aes(x=Dia_Registro, y =Cantidad_Registrados))+
+  geom_point(data= resumen_mes_actual_registrados_nacional,mapping = aes(x=Dia_Registro, y =Cantidad_Registrados),color="black")+
+  geom_line(data= resumen_mes_actual_registrados_nacional, mapping = aes(x=Dia_Registro, y =Cantidad_Registrados),color="green")+
+  geom_text(aes(label=Cantidad_Registrados),hjust=0, vjust=0)+
+  scale_x_continuous(breaks = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31))+
+  scale_y_continuous(breaks = c(0,25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500))+
+  labs(title = "Referidos Registrados Nacional")+
+  theme_classic()
+```
+
+
+```{r}
+ggplot(resumen_mes_actual_efectivos_nacional,aes(x=Dia_Vinculacion, y =Cantidad_Efectivos))+
+  geom_point(data= resumen_mes_actual_efectivos_nacional,mapping = aes(x=Dia_Vinculacion,y=Cantidad_Efectivos),color="black")+
+  geom_line(data= resumen_mes_actual_efectivos_nacional, mapping = aes(x=Dia_Vinculacion, y =Cantidad_Efectivos),color="green")+
+  geom_text(aes(label=Cantidad_Efectivos),hjust=0, vjust=0)+
+  scale_x_continuous(breaks = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31))+
+  scale_y_continuous(breaks = c(0,25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500))+
+  labs(title = "Referidos Efectivos Nacional")+
+  theme_classic()
+```
+
+##
+
+___
+
+## Resumen Fuerza Comercial / Call Center y Mercadeo`r params$mes` `r params$año` - Mensual
+
+
+## Fuerza Comercial - `r params$mes` `r params$año`
+
+<div style="text-align: justify">Por la fuerza comercial en el aplicativo CRM en el mes de `r params$mes` se han registraron **AQUI** referidos frente a una meta de **AQUI** y un cumplimiento del **AQUI**, se cuentan con **AQUI** vinculaciones efectivas que corresponden a un **AQUI** de cumplimiento frente a la meta (**AQUI** registros efectivos).<div/>
+
+##
+
+```{r}
+ggplot(resumen_mes_actual_registrados_fv,aes(x=Dia_Registro, y =Cantidad_Registrados))+
+  geom_point(data= resumen_mes_actual_registrados_fv,mapping = aes(x=Dia_Registro, y =Cantidad_Registrados),color="black")+
+  geom_line(data= resumen_mes_actual_registrados_fv, mapping = aes(x=Dia_Registro, y =Cantidad_Registrados),color="green")+
+  geom_text(aes(label=Cantidad_Registrados),hjust=0, vjust=0)+
+  scale_x_continuous(breaks = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31))+
+  scale_y_continuous(breaks = c(25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500))+
+  labs(title = "Referidos Registrados Fuerza Comercial")+
+  theme_classic()
+```
+
+##
+
+```{r}
+ggplot(resumen_mes_actual_efectivos_fv,aes(x=Dia_Vinculacion, y =Cantidad_Efectivos))+
+  geom_point(data= resumen_mes_actual_efectivos_fv,mapping = aes(x=Dia_Vinculacion,y=Cantidad_Efectivos),color="black")+
+  geom_line(data= resumen_mes_actual_efectivos_fv, mapping = aes(x=Dia_Vinculacion, y =Cantidad_Efectivos),color="green")+
+  geom_text(aes(label=Cantidad_Efectivos),hjust=0, vjust=0)+
+  scale_x_continuous(breaks = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31))+
+  scale_y_continuous(breaks = c(25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500))+
+  labs(title = "Referidos Efectivos Fuerza Comercial")+
+  theme_classic()
+```
+
+##
+___
+
+## Call Center/Mercadeo - `r params$mes` `r params$año` - Mensual
+
+<div style="text-align: justify">Resultante de las estrategias de mercadeo, por el call center se registraron **AQUI** referidos en el mes de `r params$mes` frente a una meta de **AQUI** y un cumplimiento de **AQUI**, de estos **AQUI** referidos registrados **AQUI** cumplieron con el perfil para realizar la respectiva gestión, de esos **AQUI** se gestionaron **AQUI** referidos y se han obtenido **AQUI** vinculaciones frente a una meta de **AQUI** referidos efectivos y un cumplimiento de **AQUI**, se encuentran **AQUI** registros en preingreso.<div/>
+
+
+###
+
+
+<div style="text-align: justify">Es importante aclarar que el valor de los referidos gestionados **AQUI** en base a los que cumplen perfil **AQUI** sale del informe de vinculación enviado por el call center nacional que se envía una vez al día (en la mañana) pero en realidad la gestión se esta realizando durante todo el día de los referidos que cumplen con el perfil por parte del call center por este motivo este dato puede variar.<div/>
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos 2.0 - 2022/Imagenes/cono_call_center.png){width=width height=height}
+
+##
+
+```{r}
+ggplot(resumen_mes_actual_registrados_call,aes(x=Dia_Registro, y =Cantidad_Registrados))+
+  geom_point(data= resumen_mes_actual_registrados_call,mapping = aes(x=Dia_Registro, y =Cantidad_Registrados),color="black")+
+  geom_line(data= resumen_mes_actual_registrados_call, mapping = aes(x=Dia_Registro, y =Cantidad_Registrados),color="green")+
+  geom_text(aes(label=Cantidad_Registrados),hjust=0, vjust=0)+
+  scale_x_continuous(breaks = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31))+
+  scale_y_continuous(breaks = c(25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500))+
+  labs(title = "Referidos Registrados Call Center/Mercadeo")+
+  theme_classic()
+```
+ 
+## 
+
+ 
+```{r}
+ggplot(resumen_mes_actual_efectivos_call_center,aes(x=Dia_Vinculacion, y =Cantidad_Efectivos))+
+  geom_point(data= resumen_mes_actual_efectivos_call_center,mapping = aes(x=Dia_Vinculacion,y=Cantidad_Efectivos),color="black")+
+  geom_line(data= resumen_mes_actual_efectivos_call_center, mapping = aes(x=Dia_Vinculacion, y =Cantidad_Efectivos),color="green")+
+  geom_text(aes(label=Cantidad_Efectivos),hjust=0, vjust=0)+
+  scale_x_continuous(breaks = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31))+
+  scale_y_continuous(breaks = c(25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500))+
+  labs(title = "Referidos Efectivos Call Center/Mercadeo")+
+  theme_classic()
+```
+
+
+##
+
+
+
+## Resumen Acumulado - `r params$año`
+
+##
+
+<div style="text-align: justify">En el acumulado tenemos **AQUI** referidos registrados sobre una meta acumulada que corresponde **AQUI** referidos y un cumplimiento del **AQUI**, en cuanto a los efectivos contamos con **AQUI** efectivos, se encuentran en preingresos **AQUI** para un total de **AQUI** vinculaciones sobre una meta acumulada de **AQUI** para un cumplimiento del **AQUI**. Estos datos corresponden a los meses anteriores que van del año `r params$año` y al actual en curso. (`r params$curso`)<div/>
+
+
+##
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos 2.0 - 2022/Imagenes/cuadro_acumulado_final.png){width=width height=height}
+
+##
+
+
+#### Registrados Acumulados - `r params$año`
+
+```{r,option=list(searching = FALSE)}
+datatable(head(Tabla_total_Registrados_y_metas_inicial,13),
+          rownames = FALSE,
+          class = 'cell-border stripe',
+          width = "20%",
+          filter='top',
+          extensions = 'Buttons',
+          options = list(dom= 'Brt', pageLength=13,
+          columnDefs = list(list(className = 'dt-center', targets = 0:3)),
+          buttons = c('csv', 'excel', 'pdf')
+          )
+)
+```
+
+##
+
+#### Efectivos Acumulados - `r params$año`
+
+```{r,option=list(searching = FALSE)}
+datatable(head(Tabla_total_efectivos_nacional,13),
+          rownames = FALSE,
+          class = 'cell-border stripe',
+          width = "20%",
+          filter='top',
+          extensions = 'Buttons',
+          options = list(dom= 'Brt', pageLength=13,
+          columnDefs = list(list(className = 'dt-center', targets = 0:3)),
+          buttons = c('csv', 'excel', 'pdf')
+          )
+)
+```
+
+
+
+#### Participacion Mes Actual Por Segmento Registrados y Efectivos Por Canal
+
+###
+
+<div style="text-align: justify">A continuacion se muestra la participacion del mes actual (`r params$curso` - `r params$año`) del segmento para los referidos registrados y canal para los referidos efectivos.<div/>
+
+Personas Refiriendo : **`r total_personas_refiriendo`**
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos 2.0 - 2022/Imagenes/personas_refiriendo_segmento.png){width=width height=height}
+
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos 2.0 - 2022/Imagenes/participacion_canal.png){width=width height=height}
+
+
+
+**El dato se obtiene de todos los referidos registrados en la plataforma de referidos de coomeva**
+
+
+## Detalle de Referidos Registrados y Efectivos - Red Cooperamos
+
+##
+
+<div style="text-align: justify">En el siguiente listado podemos observar el detalle de todos los referidos registrados y efectivos que han ingresado por la red cooperamos con su respectivo detalle para realizar la consulta.<div/>
+
+##
+
+<div style="text-align: justify">**Para visualizar completa la base de los registros que se encuentran en estado en proceso y en preingreso por favor descargar la informacion en Excel o CSV dando click en los siguientes botones:**<div/>
+
+##
+
+```{r,option=list(searching = FALSE)}
+datatable(head(detalle_referidos_registrados_acumulados,50000),
+          rownames = FALSE,
+          class = 'cell-border stripe',
+          filter='top',
+          extensions = 'Buttons',
+          options = list(
+            dom = 'Brt',pageLength=20,
+            columnDefs = list(list(className = 'dt-center', targets = 0:7)),
+            buttons = c('csv', 'excel', 'pdf'),
+            scrollX = TRUE,
+            fixedColumns = TRUE
+          )
+)
+```
+
+
+## 
+
+<div style="text-align: left">Yrwin Henao Urrego<div/>
+<div style="text-align: left">Analista Nal Red Cooperamos Gcc<div/>
+<div style="text-align: left">Gerencia Corporativa de la Comunidad de Asociados<div/>
+<div style="text-align: left">Tel. 57 (2) 333 0000 Ext. 32213<div/>
+<div style="text-align: left">Calle 13 # 57- 50 Piso 3 – Puerta 1<div/>
+<div style="text-align: left">Cali, Colombia<div/>
+<div style="text-align: left">yrwin_henaoo@coomeva.com.co<div/>
+<div style="text-align: left">www.coomeva.com.co<div/>
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos - 2022/Imagenes/imagen_correo.png){width=width height=height}
+
+
+
+

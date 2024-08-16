@@ -1,0 +1,30 @@
+---
+title: ""
+author: ""
+date: ""
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Buen día, cordial saludo,
+
+Adjunto envio archivo con la relacion de los pagos que deben realizarse por abono estado de cuenta correspondientes a la red cooperamos para que por favor me colaboren con la solicitud, agradezco me confirmes cuando ya queden en el sistema, muchas gracias.
+
+##
+
+## 
+
+
+<div style="text-align: left">Jessica Andrea Vergara Hurtado<div/>
+<div style="text-align: left">Analista Nal Red Cooperamos Gcc<div/>
+<div style="text-align: left">Gerencia Corporativa de la Comunidad de Asociados<div/>
+<div style="text-align: left">Tel. 57 (2) 333 0000 Ext. 32213<div/>
+<div style="text-align: left">Calle 13 # 57- 50 Piso 3 – Puerta 1<div/>
+<div style="text-align: left">Cali, Colombia<div/>
+<div style="text-align: left">jessicaa_vergara@coomeva.com.co<div/>
+<div style="text-align: left">www.coomeva.com.co<div/>
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos - 2022/Imagenes/imagen_correo.png){width=width height=height}

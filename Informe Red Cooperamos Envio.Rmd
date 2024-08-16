@@ -1,0 +1,106 @@
+---
+title: <span style="color:Green">Informe Red Cooperamos</span>
+author: "Informacion de todo la gestion realizada por canal con los referidos registrados y efectivos que se administran por la Red Cooperamos."
+date: ""
+output: html_document
+params:
+  mes: "Octubre"
+  año: "2022"
+  curso: "Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(comment = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+Informe actualizado a la fecha: `r Sys.time()`
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos/Imagenes/Coomeva.PNG){width=width height=height}
+
+___
+
+## Gestion Referidos - `r params$mes` `r params$año` - RED COOPERAMOS
+
+#### Resumen Mensual - `r params$mes` `r params$año`
+
+##
+
+<div style="text-align: justify">En el mes de `r params$mes` se han registrado un total de **`r total_registrados_mes_actual`** referidos frente una meta de **`r total_meta_registrados_mes_actual`** para un cumplimiento del **`r total_cumplimiento_registrados_mes_actual`**, de cuales han ingresado **`r total_efectivos_mes_actual`** referidos efectivos, se encuentran en preingresos **`r total_preingresos_mes_actual`** para un total de **`r total_vinculaciones_mes_actual`** vinculaciones frente a una meta de **`r total_meta_efectivos_mes_actual`** para un cumplimiento de **`r total_cumplimiento_efectivos_mes_actual`**.<div/>
+
+##
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos 2.0 - 2022/Imagenes/cuadro_mensual_final.png){width=width height=height}
+
+#### Resumen Acumulado - `r params$año`
+
+##
+
+<div style="text-align: justify">En el acumulado tenemos **AQUI** referidos registrados sobre una meta acumulada que corresponde **AQUI** referidos y un cumplimiento del **AQUI**, en cuanto a los efectivos contamos con **AQUI** efectivos, se encuentran en preingresos **AQUI** para un total de **AQUI** vinculaciones sobre una meta acumulada de **AQUI** para un cumplimiento del **AQUI**. Estos datos corresponden a los meses anteriores que van del año `r params$año` y al actual en curso. (`r params$curso`)<div/>
+
+##
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos 2.0 - 2022/Imagenes/cuadro_acumulado_final.png){width=width height=height}
+
+##
+
+___
+
+
+**Este resultado por canal de ventas se comporta de la siguiente manera:**
+
+___
+
+## Resumen Fuerza Comercial / Call Center y Mercadeo`r params$mes` `r params$año`
+
+<div style="text-align: justify">Por la fuerza comercial en el aplicativo CRM en el mes de `r params$mes` se han registraron **AQUI** referidos frente a una meta de **AQUI** y un cumplimiento del **AQUI**, se cuentan con **AQUI** vinculaciones efectivas que corresponden a un **AQUI** de cumplimiento frente a la meta (**AQUI** registros efectivos).<div/>
+
+##
+
+___
+
+## Call Center/Mercadeo - `r params$mes` `r params$año`
+
+<div style="text-align: justify">Resultante de las estrategias de mercadeo, por el call center se registraron **AQUI** referidos en el mes de `r params$mes` frente a una meta de **AQUI** y un cumplimiento de **AQUI**, de estos **AQUI** referidos registrados **AQUI** cumplieron con el perfil para realizar la respectiva gestión, de esos **AQUI** se gestionaron **AQUI** referidos y se han obtenido **AQUI** vinculaciones frente a una meta de **AQUI** referidos efectivos y un cumplimiento de **AQUI**, se encuentran **AQUI** registros en preingreso.<div/>
+
+
+###
+
+
+<div style="text-align: justify">Es importante aclarar que el valor de los referidos gestionados **AQUI** en base a los que cumplen perfil **AQUI** sale del informe de vinculación enviado por el call center nacional que se envía una vez al día (en la mañana) pero en realidad la gestión se esta realizando durante todo el día de los referidos que cumplen con el perfil por parte del call center por este motivo este dato puede variar.<div/>
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos 2.0 - 2022/Imagenes/cono_call_center.png){width=width height=height}
+
+
+##
+
+
+#### Participacion Mes Actual Por Segmento Registrados y Efectivos Por Canal
+
+###
+
+<div style="text-align: justify">A continuacion se muestra la participacion del mes actual (`r params$curso` - `r params$año`) del segmento para los referidos registrados y canal para los referidos efectivos.<div/>
+
+Personas Refiriendo : **`r total_personas_refiriendo`**
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos 2.0 - 2022/Imagenes/personas_refiriendo_segmento.png){width=width height=height}
+
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos 2.0 - 2022/Imagenes/participacion_canal.png){width=width height=height}
+
+
+
+**El dato se obtiene de todos los referidos registrados en la plataforma de referidos de coomeva**
+
+## 
+
+<div style="text-align: left">Yrwin Henao Urrego<div/>
+<div style="text-align: left">Analista Nal Red Cooperamos Gcc<div/>
+<div style="text-align: left">Gerencia Corporativa de la Comunidad de Asociados<div/>
+<div style="text-align: left">Tel. 57 (2) 333 0000 Ext. 32213<div/>
+<div style="text-align: left">Calle 13 # 57- 50 Piso 3 – Puerta 1<div/>
+<div style="text-align: left">Cali, Colombia<div/>
+<div style="text-align: left">yrwin_henaoo@coomeva.com.co<div/>
+<div style="text-align: left">www.coomeva.com.co<div/>
+
+![](C:/Users/yrhu0672/Desktop/R/Informe - Red Cooperamos - 2022/Imagenes/imagen_correo.png){width=width height=height}
